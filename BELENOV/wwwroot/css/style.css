@@ -1,0 +1,15 @@
+.custom-register-button {
+    /* Ваши настраиваемые стили для кнопки "Register" */
+    background-color: #ff0000; /* Красный цвет фона */
+    color: #ffffff; /* Белый цвет текста */
+    border: 2px solid #ff0000; /* Красная рамка */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px 20px; /* Поля */
+}
+
+    .custom-register-button:hover {
+        /* Стили при наведении курсора */
+        background-color: #cc0000; /* Темно-красный цвет фона */
+        border-color: #cc0000; /* Темно-красная рамка */
+        color: #ffffff; /* Белый цвет текста */
+    }

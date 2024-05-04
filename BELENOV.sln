@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BELENOV", "BELENOV\BELENOV.csproj", "{066BFB43-871F-41B6-BD14-D686967E38BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{066BFB43-871F-41B6-BD14-D686967E38BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066BFB43-871F-41B6-BD14-D686967E38BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066BFB43-871F-41B6-BD14-D686967E38BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066BFB43-871F-41B6-BD14-D686967E38BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAD0576F-11FA-47A5-A65C-4648824AC85D}
+	EndGlobalSection
+EndGlobal

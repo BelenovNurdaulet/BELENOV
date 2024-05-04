@@ -1,0 +1,108 @@
+﻿@page
+@model LoginModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<!DOCTYPE html>
+<html data-wf-page="60e4a24b4fbd9c3a27ac9799" data-wf-site="60e4a24b4fbd9caff8ac9796" data-wf-status="1">
+<head>
+    <meta charset="utf-8" />
+    <title>BELENOV LOGIN</title>
+    <meta content="eSports Webflow Template is a premium Webflow Template for eSports teams and professional gamers. It includes everything your team needs to have an amazing website." name="description" />
+    <meta content="eSports - Webflow Ecommerce Website Template" property="og:title" />
+    <meta content="eSports Webflow Template is a premium Webflow Template for eSports teams and professional gamers. It includes everything your team needs to have an amazing website." property="og:description" />
+    <meta content="images/esports-20-20featured-20image.png" property="og:image" />
+    <meta content="eSports - Webflow Ecommerce Website Template" property="twitter:title" />
+    <meta content="eSports Webflow Template is a premium Webflow Template for eSports teams and professional gamers. It includes everything your team needs to have an amazing website." property="twitter:description" />
+    <meta content="images/esports-20-20featured-20image.png" property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+
+    <link href="@Url.Content("~/css/webflow-style.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" asp-append-version="true" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" asp-append-version="true" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript" asp-append-version="true"></script>
+    <script type="text/javascript" asp-append-version="true">WebFont.load({ google: { families: ["Barlow:regular", "Chakra Petch:regular,500,600,700"] } });</script>
+    <script type="text/javascript" asp-append-version="true">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+
+    <link href="@Url.Content("~/images/icon.png")" rel="shortcut icon" type="image/x-icon" asp-append-version="true" />
+    <link href="@Url.Content("~/images/app-icon.png")" rel="apple-touch-icon" asp-append-version="true" />
+
+    <script type="text/javascript" asp-append-version="true">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "$init": true, "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+    <script type="text/javascript" src="@Url.Content("~/js/script.js")" asp-append-version="true"></script>
+    <link href="@Url.Content("~/css/webflow-style.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="@Url.Content("~/css/style.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+
+
+</head>
+
+
+<div data-w-id="0c5347a1-7081-121f-ba9d-e72a17158b82" class="section home-hero">
+    <img src="@Url.Content("~/images/bg-home-hero-esports-template2.jpg")" alt="" sizes="100vw" class="bg home-hero" asp-append-version="true" /><div class="container-default w-container">
+      
+        <div class="container-medium-718px contact">
+            <h2>Login</h2>
+            <h3>Use a local account to log in.</h3>
+
+        </div>
+        <div class="container-medium-955px">
+            
+            <div class="contact-form-wrapper">
+
+                <section>
+                    <form id="account" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-floating">
+                            <input asp-for="Input.Email" class="input w-input" autocomplete="username" aria-required="true" />
+                            <label asp-for="Input.Email" class="form-label"></label>
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating">
+                            <input asp-for="Input.Password" class="input w-input" autocomplete="current-password" aria-required="true" />
+                            <label asp-for="Input.Password" class="form-label"></label>
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <div class="checkbox">
+                                <label asp-for="Input.RememberMe" class="form-label">
+                                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+
+                            <a id="forgot-password" asp-page="./ForgotPassword" class="nav-link w--current">Forgot your password? / </a>
+
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="nav-link w--current">Register as a new user / </a>
+
+                            <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="nav-link w--current">Resend email confirmation</a>
+
+                        </div>
+                        <div class="container-medium-718px contact">
+                            <button id="login-submit" type="submit" class="button-primary _2-buttons w-button">Log in</button>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
+
+        </div>
+        
+        
+        <div data-w-id="0d6c03a7-bf55-64d2-faf4-9a54eb8f89dc" style="opacity:0" class="sponsors-wrapper"><div data-w-id="83dc05fc-827a-e430-75e4-8b8bf1991eed" style="opacity:0" class="sponsors-text">Sponsored By</div><div class="w-layout-grid sponsors-grid"><img src="images/logo-1-sponsor-esports-template.svg" alt="" style="opacity:0" data-w-id="26771a3f-5f34-6149-0a3a-740c4fe7fb37" class="image sponsor" /><img src="images/logo-2-sponsor-esports-template.svg" alt="" style="opacity:0" data-w-id="8710c450-a7e3-e510-82b0-9e177e00ed09" class="image sponsor" /><img src="images/logo-3-sponsor-esports-template.svg" alt="" style="opacity:0" data-w-id="17d17429-7b16-b645-37f8-d4e49e320277" class="image sponsor" /><img src="images/logo-4-sponsor-esports-template.svg" alt="" style="opacity:0" data-w-id="ebe6ae90-67bb-7cdb-fd45-7fbde637d6ee" class="image sponsor" /></div></div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
